@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #121212;
+    --secondary: #555555;
+    --border: rgba(18, 18, 18, 0.08);    
+    --black: #121212;
+    --black-2: #555555;
+    --white: #FFFFFF;
+    --white-2: #999999;
+    --action: #FFCD4D;
+    --theme: #7963FF;
+}
+
+body {
+    font-family: var(--font_kanit);
+    line-height: 1;
+}
+
+section {
+    margin-bottom: -1px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.features-area-inner {
+    position: relative;
+}
+
+.features-area-inner .shape-1 {
+    position: absolute;
+    inset-inline-start: calc(100% - 225px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 425px;
+}
+
+.features-area-inner .shape-2 {
+    position: absolute;
+    inset-inline-start: calc(100% - 195px);
+    top: calc(100% - 65px);
+    width: 200px;
+}
+
+img {
+    max-width: 100%;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.features-area .section-content {
+    display: flex;
+    gap: 40px 71px;
+    align-items: center;
+    background-color: #f9fafd;
+    border-radius: 30px;
+    padding: 130px 115px 143px;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.section-subtitle.has-left-line {
+    padding-inline-start: 60px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--theme);
+    font-family: var(--font_dmsans);
+    position: relative;
+}
+
+.has-left-line {
+    position: relative;
+    padding-inline-start: 35px;
+    display: inline-block;
+}
+
+.section-subtitle.has-left-line:before {
+    width: 50px;
+    height: 2px;
+}
+
+.has-left-line:before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: currentColor;
+    inset-inline-start: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.features-area .section-content .title-wrapper {
+    margin-top: 31px;
+}
+
+.features-area .section-title {
+    font-size: 50px;
+    max-width: 403px;
+}
+
+.font-heading-dmsans-medium h2 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.features-area .text-wrapper.has-left-line {
+    padding-inline-start: 265px;
+}
+
+.features-area .text-wrapper.has-left-line:before {
+    width: 200px;
+    height: 2px;
+    background-color: #121212;
+}
+
+.features-area .text-wrapper .title {
+    font-size: 250px;
+    font-weight: 400;
+    line-height: .74;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.features-area .text-wrapper .title span {
+    font-size: 50px;
+    line-height: .4;
+}
+
+.features-area .text-wrapper .text {
+    font-size: 20px;
+    line-height: 1.38;
+    margin-top: 31px;
+    max-width: 303px;
+}
+
+text-wrapper p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.41;
+    font-weight: 400;
+    font-size: 18px;
+    color: #555555;
+}
+
+
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 1919px) {
+    .features-area-inner .shape-1 {
+        inset-inline-start: calc(100% - 125px);
+    }
+    .features-area-inner .shape-2 {
+        inset-inline-start: calc(100% - 145px);
+    }
+    .section-title {
+        font-size: 65px;
+    }
+    .features-area .text-wrapper.has-left-line {
+        padding-inline-start: 165px;
+    }
+    .features-area .text-wrapper .title {
+        font-size: 150px;
+    }
+    .features-area .text-wrapper.has-left-line:before{
+        width: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+
+
