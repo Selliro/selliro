@@ -24,6 +24,19 @@ body {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    transition: all .3s;
+    color: inherit;
+}
+p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.41;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--secondary);
+}
 .header-area .header-area__inner {
     display: flex;
     align-items: center;
@@ -806,6 +819,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 740px;
     margin-inline: auto;
     text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--font_kanit);
 }
 .section-title span {
     color: var(--white-2);
@@ -832,9 +847,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .service-box .number {
     font-size: 30px;
-    font-family: var(--font_teko);
+    font-family: var(--font_dmsans);
     font-weight: 600;
     color: var(--primary);
+    padding-inline-start: 10px;
 }
 .service-box .content {
     display: grid;
@@ -845,6 +861,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 36px;
     text-transform: uppercase;
     line-height: .88;
+    font-family: var(--font_dmsans);
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 .service-box .text {
     max-width: 340px;
@@ -869,7 +888,34 @@ h1, h2, h3, h4, h5, h6 {
 .show-light {
     display: inline-block;
 }
-
+.service-area .service-area-inner {
+    position: relative;
+    z-index: 1;
+}
+.service-area .service-area-inner .shape__1 {
+    position: absolute;
+    top: 0;
+    inset-inline-end: calc(100% - 77px);
+    width: -moz-max-content;
+    width: max-content;
+    z-index: -1;
+}
+.service-area .service-area-inner .shape-2 {
+    position: absolute;
+    top: 0;
+    inset-inline-end: calc(100% - 115px);
+    transform: translateY(-50%);
+}
+.service-area .has_fade_anim a:hover {
+    background-color: var(--black-2);
+    display: block;
+}
+.service-area .has_fade_anim a:hover .service-box .number, 
+.service-area .has_fade_anim a:hover .service-box .content .title,
+.service-area .has_fade_anim a:hover .service-box .content .content-last .text,
+.service-area .has_fade_anim a:hover .service-box .feature-list li{
+    color: var(--white);
+}
 
 
 
