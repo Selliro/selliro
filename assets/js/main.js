@@ -151,6 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ease: "power2.out",
     stagger: 0.3
   });
+  gsap.to(".circle-rotate", {
+    rotate: 360,
+    duration: 20,
+    repeat: -1,
+    ease: "none",
+    transformOrigin: "50% 50%"
+  });
 });
 
 
@@ -188,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cursor.classList.remove("cursor-hover");
     });
   });
+  
 });
 
 const works = [
@@ -198,29 +206,82 @@ const works = [
   { title: "Kutober Jake", tag: "Design - 2024", img: "assets/img/img-s-5.webp" }
 ];
 
-// Get the container element
-const container = document.getElementById('works-container');
 
-// Loop through the works array and create HTML for each item
-works.forEach(work => {
-  const workItem = `
-    <div class="has_fade_anim">
-      <a href="">
-        <div class="work-box">
-          <div class="thumb">
-            <img src="${work.img}" alt="" />
-          </div>
-          <div class="content">
-            <h2 class="title">${work.title}</h2>
-          </div>
-          <div class="meta">
-            <p class="tag">${work.tag}</p>
-          </div>
-        </div>
-      </a>
-    </div>
-  `;
-  
-  // Insert the HTML into the container
-  container.insertAdjacentHTML('beforeend', workItem);
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll('.case-studies-list .item');
+
+  // Hover for 2nd item
+  items[1].addEventListener('mouseenter', function () {
+    document.querySelector('.case-studies-image .images').classList.add('hovered2');
+  });
+  items[1].addEventListener('mouseleave', function () {
+    document.querySelector('.case-studies-image .images').classList.remove('hovered2');
+  });
+
+  // Hover for 3rd item
+  items[2].addEventListener('mouseenter', function () {
+    document.querySelector('.case-studies-image .images').classList.add('hovered3');
+  });
+  items[2].addEventListener('mouseleave', function () {
+    document.querySelector('.case-studies-image .images').classList.remove('hovered3');
+  });
+
+  // Hover for 4th item
+  items[3].addEventListener('mouseenter', function () {
+    document.querySelector('.case-studies-image .images').classList.add('hovered4');
+  });
+  items[3].addEventListener('mouseleave', function () {
+    document.querySelector('.case-studies-image .images').classList.remove('hovered4');
+  });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const parent = document.querySelector('.projects-circle-list');
+  const images = parent.querySelectorAll('.image');
+
+  const hoverClasses = ['hovered2', 'hovered3', 'hovered4', 'hovered5'];
+
+  // Loop from index 1 to 4 (2nd to 5th .image element)
+  for (let i = 1; i <= 4; i++) {
+    const image = images[i];
+    const className = hoverClasses[i - 1];
+
+    if (image) {
+      image.addEventListener('mouseenter', function () {
+        parent.classList.add(className);
+      });
+
+      image.addEventListener('mouseleave', function () {
+        parent.classList.remove(className);
+      });
+    }
+  }
+});
+
+
+// Get the container element
+// const container = document.getElementById('works-container');
+
+// // Loop through the works array and create HTML for each item
+// works.forEach(work => {
+//   const workItem = `
+//     <div class="has_fade_anim">
+//       <a href="">
+//         <div class="work-box">
+//           <div class="thumb">
+//             <img src="${work.img}" alt="" />
+//           </div>
+//           <div class="content">
+//             <h2 class="title">${work.title}</h2>
+//           </div>
+//           <div class="meta">
+//             <p class="tag">${work.tag}</p>
+//           </div>
+//         </div>
+//       </a>
+//     </div>
+//   `;
+  
+//   // Insert the HTML into the container
+//   container.insertAdjacentHTML('beforeend', workItem);
+// });
