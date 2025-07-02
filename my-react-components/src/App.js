@@ -11,7 +11,7 @@ import Selliro from './components/Seliro';
 
 function App() {
     useHeroAnimations();
-    useFeaturesAnimations();
+    // useFeaturesAnimations();
   return (
     <div className="App">
       <CustomCursor />

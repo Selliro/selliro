@@ -1,5 +1,7 @@
 import React from "react";
 import "./Selliro.css";
+import CommonButton from './common/Button';
+import ResponsiveImage from "./common/ResponsiveImage";
 import LaptopLogo from '../assets/img/laptop-with-smartphone-mock-up.png';
 import Award from '../assets/img/img-s-16.webp';
 import Info from '../assets/img/img-s-17.webp';
@@ -46,9 +48,7 @@ const Selliro = () => (
             </nav>
           </div>
           <div className="header__button">
-            <a href="contact.html" className="wc-btn wc-btn-primary btn-text-flip">
-              <span data-text="Get started">Get started</span>
-            </a>
+            <CommonButton type="rounded" dataText="Get started" url="/learn-more" text="Get started" className="wc-btn wc-btn-primary btn-text-flip"/>
           </div>
           <div className="header__navicon d-xl-none">
             <button className="open-offcanvas">
@@ -69,14 +69,15 @@ const Selliro = () => (
               <div className="container large">
                 <div className="hero-area-inner">
                   <div className="shape-1">
-                    <img className="show-light" src={LaptopLogo} alt="shape" />
+                    {/* <img className="show-light" src={LaptopLogo} alt="shape" /> */}
+                    <ResponsiveImage desktopImage={LaptopLogo} alt="Hero banner" aspectRatio={1.6}/>
                   </div>
                   <div className="section-content">
                     <div className="content-first">
                       <div className="year-box overflow-hidden">
                         <span className="meta">2018, 2023</span>
                         <div className="thumb has_fade_anim" data-fade-from="top" data-fade-offset="0" data-delay="0.45">
-                          <img src="assets/img/img-s-16.webp" alt="image" />
+                           <ResponsiveImage desktopImage={Award} alt="award" aspectRatio={1.015}/>
                         </div>
                         <div className="title has_fade_anim">Award winning agency</div>
                         <div className="btn-wrapper">
@@ -86,7 +87,8 @@ const Selliro = () => (
                         </div>
                       </div>
                       <div className="meta-info has_fade_anim">
-                        <img src="assets/img/img-s-17.webp" alt="image" />
+                        {/* <img src="assets/img/img-s-17.webp" alt="image" /> */}
+                        <ResponsiveImage desktopImage={Info} alt="Info" aspectRatio={1}/>
                         <p className="text">We’re a digital agency that builds amazing user experience team for design.</p>
                       </div>
                     </div>
@@ -102,9 +104,11 @@ const Selliro = () => (
                                 <div>n</div>
                                 <div>k</div>
                               </div>
-                              <img className="icon-first has_fade_anim" data-fade-from="left" src="assets/img/img-s-18.webp" alt="img" />
+                               <ResponsiveImage desktopImage={IconFirst} alt="Info" aspectRatio={1}/>
+                              {/* <img className="icon-first has_fade_anim" data-fade-from="left" src="assets/img/img-s-18.webp" alt="img" /> */}
                               <br />
-                              <img className="icon-second has_fade_anim" data-fade-from="left" src="assets/img/img-s-19.webp" alt="shape" />
+                              {/* <img className="icon-second has_fade_anim" data-fade-from="left" src="assets/img/img-s-19.webp" alt="shape" /> */}
+                              <ResponsiveImage desktopImage={IconSecond} alt="Info" aspectRatio={1}/>
                               <div>
                                 <div>f</div>
                                 <div>a</div>
@@ -144,12 +148,9 @@ const Selliro = () => (
                           </div>
                         </div>
                         <div className="btn-wrapper has_fade_anim">
-                          <a href="about.html" className="wc-btn wc-btn-primary btn-text-flip">
-                            <span data-text="Learn more">Learn more</span>
-                          </a>
-                          <a href="https://www.youtube.com/watch?v=AzwC6umvd1s" className="wc-btn wc-btn-normal video-btn video-popup">
-                            Watch how <br /> we work <i className="fa-solid fa-play"></i>
-                          </a>
+                           <CommonButton type="rounded" url="about.html" dataText="Learn more" text="Learn more" className="wc-btn wc-btn-primary btn-text-flip"/>
+
+                           <CommonButton type="scroll-indicator" text={<>Watch how <br /> we work</>} url="https://www.youtube.com/watch?v=AzwC6umvd1s"  className="wc-btn wc-btn-normal video-btn video-popup" />
                         </div>
                       </div>
                       <div className="scroll-down">
@@ -402,12 +403,7 @@ const Selliro = () => (
                           <textarea id="form_message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
                         </div>
                         <div className="mt-60">
-                          <button type="submit" className="wc-btn wc-btn-primary btn-text-flip">
-                            <span data-text="Send Your Messag">Send Your Messag</span>                                
-                            <p className="icon invert ml-10">
-                              <img src="assets/img/arrow-top-right.svg" alt="" />
-                            </p>
-                          </button>
+                            <CommonButton type="submit" dataText="Send Your Messag" text="Send Your Messag" />
                         </div>
                       </div>
                     </form>

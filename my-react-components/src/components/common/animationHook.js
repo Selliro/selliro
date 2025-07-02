@@ -29,13 +29,13 @@ export const useHeroAnimations = () => {
 
     // 2. HERO-AREA FADE ANIMATIONS
     const fadeElements = [
-      { el: '.year-box .meta', delay: 0.2, from: 'top' },
-      { el: '.year-box .thumb', delay: 0.45, from: 'top' },
-      { el: '.year-box .title', delay: 0.7, from: 'left' },
-      { el: '.year-box .meta-info', delay: 1, from: 'left' },
-      { el: '.icon-first', delay: 0.8, from: 'left' },
+      // { el: '.year-box .meta', delay: 0.2, from: 'top' },
+      // { el: '.year-box .thumb', delay: 0.45, from: 'top' },
+      // { el: '.year-box .title', delay: 0.7, from: 'left' },
+      // { el: '.year-box .meta-info', delay: 1, from: 'left' },
+      // { el: '.icon-first', delay: 0.8, from: 'left' },
       { el: '.icon-second', delay: 1, from: 'left' },
-      { el: '.btn-wrapper.has_fade_anim', delay: 1.2, from: 'bottom' },
+      // { el: '.btn-wrapper.has_fade_anim', delay: 1.2, from: 'bottom' },
       { el: '.scroll-down', delay: 1.5, from: 'bottom' },
       { el: '.hero-social', delay: 1.2, from: 'right' }
     ];
@@ -62,20 +62,20 @@ export const useHeroAnimations = () => {
       });
     });
 
-    // 3. HERO SOCIAL ICONS
-    const socialIcons = document.querySelectorAll('.hero-social-links a');
-    const socialAnimation = gsap.from(socialIcons, {
-      scrollTrigger: {
-        trigger: ".hero-social",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      stagger: 0.15,
-      ease: "back.out(1.2)"
-    });
+    // // 3. HERO SOCIAL ICONS
+    // const socialIcons = document.querySelectorAll('.hero-social-links a');
+    // const socialAnimation = gsap.from(socialIcons, {
+    //   scrollTrigger: {
+    //     trigger: ".hero-social",
+    //     start: "top 80%",
+    //     toggleActions: "play none none none"
+    //   },
+    //   opacity: 0,
+    //   y: 20,
+    //   duration: 0.6,
+    //   stagger: 0.15,
+    //   ease: "back.out(1.2)"
+    // });
 
     // 4. SHAPE FLOAT EFFECT
     const shapeImg = document.querySelector('.shape-1 img');
@@ -105,7 +105,7 @@ export const useHeroAnimations = () => {
     return () => {
       letterTimeline.kill();
       fadeAnimations.forEach(anim => anim?.kill());
-      socialAnimation.kill();
+      // socialAnimation.kill();
       shapeAnimation?.kill();
       scrollAnimation?.kill();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -113,73 +113,73 @@ export const useHeroAnimations = () => {
   }, []);
 };
 
-export const useFeaturesAnimations = () => {
-  useEffect(() => {
-    // Subtitle
-    const subtitleAnimation = gsap.from(".section-subtitle", {
-      scrollTrigger: {
-        trigger: "#features",
-        start: "top 80%",
-      },
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out"
-    });
+// export const useFeaturesAnimations = () => {
+//   useEffect(() => {
+//     // Subtitle
+//     const subtitleAnimation = gsap.from(".section-subtitle", {
+//       scrollTrigger: {
+//         trigger: "#features",
+//         start: "top 80%",
+//       },
+//       x: -50,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power2.out"
+//     });
 
-    // Title lines
-    const titleAnimation = gsap.from("#features .section-title div", {
-      scrollTrigger: {
-        trigger: "#features .section-title",
-        start: "top 80%",
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      stagger: 0.2
-    });
+//     // Title lines
+//     const titleAnimation = gsap.from("#features .section-title div", {
+//       scrollTrigger: {
+//         trigger: "#features .section-title",
+//         start: "top 80%",
+//       },
+//       y: 50,
+//       opacity: 0,
+//       duration: 0.8,
+//       ease: "power2.out",
+//       stagger: 0.2
+//     });
 
-    // Counter + Text
-    const textWrapperAnimation = gsap.from("#features .text-wrapper", {
-      scrollTrigger: {
-        trigger: "#features .text-wrapper",
-        start: "top 90%",
-      },
-      opacity: 0,
-      y: 40,
-      duration: 1,
-      ease: "power2.out"
-    });
+//     // Counter + Text
+//     const textWrapperAnimation = gsap.from("#features .text-wrapper", {
+//       scrollTrigger: {
+//         trigger: "#features .text-wrapper",
+//         start: "top 90%",
+//       },
+//       opacity: 0,
+//       y: 40,
+//       duration: 1,
+//       ease: "power2.out"
+//     });
 
-    // Shape animations
-    const shapeAnimations = gsap.from("#features .shape_1 img, #features .shape-2 img", {
-      scrollTrigger: {
-        trigger: "#features",
-        start: "top 85%",
-      },
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-      stagger: 0.3
-    });
+//     // Shape animations
+//     const shapeAnimations = gsap.from("#features .shape_1 img, #features .shape-2 img", {
+//       scrollTrigger: {
+//         trigger: "#features",
+//         start: "top 85%",
+//       },
+//       y: 30,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power2.out",
+//       stagger: 0.3
+//     });
 
-    const circleAnimation = gsap.to(".circle-rotate", {
-      rotate: 360,
-      duration: 20,
-      repeat: -1,
-      ease: "none",
-      transformOrigin: "50% 50%"
-    });
+//     const circleAnimation = gsap.to(".circle-rotate", {
+//       rotate: 360,
+//       duration: 20,
+//       repeat: -1,
+//       ease: "none",
+//       transformOrigin: "50% 50%"
+//     });
 
-    return () => {
-      subtitleAnimation.kill();
-      titleAnimation.kill();
-      textWrapperAnimation.kill();
-      shapeAnimations.kill();
-      circleAnimation.kill();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-};
+//     return () => {
+//       subtitleAnimation.kill();
+//       titleAnimation.kill();
+//       textWrapperAnimation.kill();
+//       shapeAnimations.kill();
+//       circleAnimation.kill();
+//       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+//     };
+//   }, []);
+// };
