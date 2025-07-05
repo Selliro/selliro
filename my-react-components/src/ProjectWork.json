@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Chill",
+    "url": "https://chill.com/",
+    "img": "chill-project-img.png",
+    "description": "Creating product concepts that bridge great ideas and user expectations."
+  },
+  {
+    "name": "Kimia Wellness",
+    "url": "https://kimia-wellness.com/",
+    "img": "kimia-project-img.png",
+    "description": "Creating product concepts that bridge great ideas and user expectations."
+  },
+  {
+    "name": "Swing Fans",
+    "url": "https://swingfans.com/",
+    "img": "swing-fan-project-img.png",
+    "description": "Creating product concepts that bridge great ideas and user expectations."
+  },
+  {
+    "name": "DOCS-dermgroup",
+    "url": "https://shop.docsdermgroup.com/",
+    "img": "DOCS-project-img.png",
+    "description": "Creating product concepts that bridge great ideas and user expectations."
+  }
+]

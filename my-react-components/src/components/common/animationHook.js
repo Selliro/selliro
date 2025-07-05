@@ -37,7 +37,7 @@ export const useHeroAnimations = () => {
       { el: '.icon-second', delay: 1, from: 'left' },
       // { el: '.btn-wrapper.has_fade_anim', delay: 1.2, from: 'bottom' },
       { el: '.scroll-down', delay: 1.5, from: 'bottom' },
-      { el: '.hero-social', delay: 1.2, from: 'right' }
+      // { el: '.hero-social', delay: 1.2, from: 'right' }
     ];
 
     const fadeAnimations = fadeElements.map(item => {
@@ -113,8 +113,8 @@ export const useHeroAnimations = () => {
   }, []);
 };
 
-// export const useFeaturesAnimations = () => {
-//   useEffect(() => {
+export const useFeaturesAnimations = () => {
+  useEffect(() => {
 //     // Subtitle
 //     const subtitleAnimation = gsap.from(".section-subtitle", {
 //       scrollTrigger: {
@@ -165,21 +165,21 @@ export const useHeroAnimations = () => {
 //       stagger: 0.3
 //     });
 
-//     const circleAnimation = gsap.to(".circle-rotate", {
-//       rotate: 360,
-//       duration: 20,
-//       repeat: -1,
-//       ease: "none",
-//       transformOrigin: "50% 50%"
-//     });
+    const circleAnimation = gsap.to(".circle-rotate", {
+      rotate: 360,
+      duration: 20,
+      repeat: -1,
+      ease: "none",
+      transformOrigin: "50% 50%"
+    });
 
-//     return () => {
+    return () => {
 //       subtitleAnimation.kill();
 //       titleAnimation.kill();
 //       textWrapperAnimation.kill();
 //       shapeAnimations.kill();
-//       circleAnimation.kill();
-//       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-//     };
-//   }, []);
-// };
+        circleAnimation.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+};
