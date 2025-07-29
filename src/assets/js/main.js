@@ -58,19 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 3. HERO SOCIAL ICONS
-  // const socialIcons = document.querySelectorAll('.hero-social-links a');
-  // gsap.from(socialIcons, {
-  //   scrollTrigger: {
-  //     trigger: ".hero-social",
-  //     start: "top 80%",
-  //     toggleActions: "play none none none"
-  //   },
-  //   opacity: 0,
-  //   y: 20,
-  //   duration: 0.6,
-  //   stagger: 0.15,
-  //   ease: "back.out(1.2)"
-  // });
+  const socialIcons = document.querySelectorAll('.hero-social-links a');
+  gsap.from(socialIcons, {
+    scrollTrigger: {
+      trigger: ".hero-social",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "back.out(1.2)"
+  });
 
   // 4. SHAPE FLOAT EFFECT
   const shapeImg = document.querySelector('.shape-1 img');

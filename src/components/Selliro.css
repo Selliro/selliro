@@ -303,6 +303,9 @@ a {
     font-size: 40px;
     font-weight: 700;
     line-height: 1;
+    display: flex;
+    column-gap: 25px;
+    flex-wrap: wrap;
 }
 .hero-area .section-header .section-title .icon-first {
     margin-top: -25px;
@@ -1681,7 +1684,7 @@ button, input, optgroup, select, textarea {
         padding-top: 86px;
     }
     .hero-area .section-header .section-title {
-        font-size: 120px;        
+        font-size: 100px;        
     }
 }
 

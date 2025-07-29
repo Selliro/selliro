@@ -1,0 +1,52 @@
+{
+    "content": {
+      "subtitle": "Let's Connect",
+      "title": "Let's get started with our team",
+      "description": "Use customer data to build great and solid product experiences that convert."
+    },
+    "formFields": [
+      {
+        "id": "form_name",
+        "label": "Full Name",
+        "type": "text",
+        "name": "name",
+        "placeholder": "Your full name",
+        "required": true
+      },
+      {
+        "id": "form_email",
+        "label": "Email Address",
+        "type": "email",
+        "name": "email",
+        "placeholder": "Your email address",
+        "required": true
+      },
+      {
+        "id": "form_subject",
+        "label": "Subject",
+        "type": "text",
+        "name": "subject",
+        "placeholder": "Subject",
+        "required": true
+      },
+      {
+        "id": "form_budget",
+        "label": "Your Budget",
+        "type": "text",
+        "name": "budget",
+        "placeholder": "A range of budget for project",
+        "optional": true
+      },
+      {
+        "id": "form_message",
+        "label": "Message",
+        "type": "textarea",
+        "name": "message",
+        "placeholder": "Write your message here...",
+        "required": true,
+        "fullWidth": true
+      }
+    ],
+    "buttonText": "Send Your Message"
+  }
+  

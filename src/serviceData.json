@@ -1,0 +1,41 @@
+{
+    "sectionTitle": "we provide premium service",
+    "highlightWord": "provide",
+    "description": "Our ability to combine expertise and systems thinking is what fuels us as a team.",
+    "shapes": [
+      { "className": "shape__1", "src": "./assets/img/img-s-10.webp" }
+    ],
+    "projects": [
+      {
+        "img": "project5.webp",
+        "title": "Digital pulse",
+        "description": "A complete brand refresh, elevating identity with modern design and messaging that connects with a global audience.",
+        "link": "work-single.html"
+      },
+      {
+        "img": "project6.webp",
+        "title": "Visual impact",
+        "description": "A complete brand refresh, elevating identity with modern design and messaging that connects with a global audience.",
+        "link": "work-single.html"
+      },
+      {
+        "img": "project7.webp",
+        "title": "Social hub",
+        "description": "A complete brand refresh, elevating identity with modern design and messaging that connects with a global audience.",
+        "link": "work-single.html"
+      },
+      {
+        "img": "project8.webp",
+        "title": "UI/UX design",
+        "description": "A complete brand refresh, elevating identity with modern design and messaging that connects with a global audience.",
+        "link": "work-single.html"
+      },
+      {
+        "img": "project9.webp",
+        "title": "Print design",
+        "description": "A complete brand refresh, elevating identity with modern design and messaging that connects with a global audience.",
+        "link": "work-single.html"
+      }
+    ]
+  }
+  
