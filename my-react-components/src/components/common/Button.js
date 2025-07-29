@@ -34,7 +34,7 @@ const CommonButton = ({
     return (
       <a
         href={url}
-        className={`w-10 h-16 border border-gray-300 rounded-full flex items-center justify-center ${className}`}
+        className={`w-10 h-16 border-gray-300 rounded-full flex items-center justify-center ${className}`}
       >
        {text} <i className="fa-solid fa-play"></i>
       </a>

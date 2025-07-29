@@ -54,52 +54,58 @@ const Selliro = () => (
                           <div className="title-wrapper overflow-hidden">
                             <h1 className="section-title has_char_anim" data-duration="0.75">
                               <div>
-                                <div>T</div>
+                                <div>S</div>
                                 <div>h</div>
+                                <div>o</div>
+                                <div>p</div>
                                 <div>i</div>
+                                <div>f</div>
+                                <div>y</div>
+                              </div>
+                              <div>
+                                <div>d</div>
+                                <div>e</div>
+                                <div>s</div>
+                                <div>i</div>
+                                <div>g</div>
                                 <div>n</div>
-                                <div>k</div>
                               </div>
                                <ResponsiveImage desktopImage={IconFirst} alt="Info" aspectRatio={1}/>
                               {/* <img className="icon-first has_fade_anim" data-fade-from="left" src="assets/img/img-s-18.webp" alt="img" /> */}
                               <br />
                               {/* <img className="icon-second has_fade_anim" data-fade-from="left" src="assets/img/img-s-19.webp" alt="shape" /> */}
-                              <ResponsiveImage desktopImage={IconSecond} alt="Info" aspectRatio={1}/>
+                              {/* <ResponsiveImage desktopImage={IconSecond} alt="Info" aspectRatio={1}/> */}
                               <div>
-                                <div>f</div>
-                                <div>a</div>
                                 <div>s</div>
-                                <div>t</div>
                                 <div>e</div>
-                                <div>r</div>
-                              </div>
-                              <div>
-                                <div>&</div>
-                              </div>
-                              <div>
-                                <div>m</div>
                                 <div>a</div>
-                                <div>k</div>
+                                <div>m</div>
+                                <div>l</div>
                                 <div>e</div>
+                                <div>e</div>
+                                <div>s</div>
+                              </div>                          
+                              <div>
+                                <div>u</div>
+                                <div>s</div>
+                                <div>e</div>
+                                <div>r</div>                                
                               </div>
                               <span>
                                 <div>
-                                  <div>d</div>
                                   <div>e</div>
-                                  <div>s</div>
+                                  <div>x</div>
+                                  <div>p</div>
+                                  <div>e</div>
+                                  <div>r</div>
                                   <div>i</div>
-                                  <div>g</div>
+                                  <div>e</div>
                                   <div>n</div>
+                                  <div>c</div>
+                                  <div>e</div>
                                 </div>
                               </span>
-                              <div>
-                                <div>b</div>
-                                <div>e</div>
-                                <div>t</div>
-                                <div>t</div>
-                                <div>e</div>
-                                <div>r</div>
-                              </div>
+                              
                             </h1>
                           </div>
                         </div>
@@ -122,8 +128,7 @@ const Selliro = () => (
                         <p className="title">Follow</p>
                         <div className="hero-social-links">
                           <a href=""><i className="fa-brands fa-facebook-f"></i></a>
-                          <a href=""><i className="fa-brands fa-twitter"></i></a>
-                          <a href=""><i className="fa-brands fa-dribbble"></i></a>
+                          <a href=""><i className="fa-brands fa-twitter"></i></a>                          
                           <a href=""><i className="fa-brands fa-instagram"></i></a>
                         </div>
                       </div>

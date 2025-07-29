@@ -36,12 +36,12 @@ function App() {
     const featuresData = {
       subtitle: "Key Features",
       titleLines: [
-        "We helped to get",
-        "companies with",
-        "$100M+ funding",
+        "Trusted by startups ",
+        "and brands with ",
+        "$100M+ in funding",
         "globally.",
       ],
-      counter: 81,
+      counter: 40,
       counterLabel: "+",
       description: "We help brands stand out through visual design",
       shapes: [
@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <CustomCursor />
-      <Header logo="Selliro" menuItems={menuItems} button={headerButton} />;
+      <Header logo="Selliro" menuItems={menuItems} button={headerButton} />
       <Selliro />
       <FeaturesSection {...featuresData} />      
       <ProjectWork
