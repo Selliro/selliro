@@ -11,6 +11,7 @@ import ProjectWork from './components/ProjectWork';
 import FeaturesSection from "./components/FeaturesSection";
 import ServiceArea from "./components/ServiceArea";
 import serviceData from "./serviceData.json";
+import Faq from "./components/faq";
 import ContactForm from "./components/ContactForm";
 import contactFormData from "./contactFormData.json";
 
@@ -61,6 +62,7 @@ function App() {
         projects={PrjoectData}
       />
       <ServiceArea {...serviceData} />
+      <Faq />
       <ContactForm 
         content={contactFormData.content}
         formFields={contactFormData.formFields}

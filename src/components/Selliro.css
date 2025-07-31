@@ -1693,3 +1693,127 @@ button, input, optgroup, select, textarea {
         max-width: 1320px;
     }
 }
+
+
+/* collapsible tab */
+
+/* src/components/CollapsibleTab.css */
+.collapsible-tab {
+  margin-bottom: 15px;
+  border-left: 3px solid #ddd;
+  padding-left: 15px;
+}
+
+.question {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+}
+
+.question:hover {
+  color: #0066cc;
+}
+
+.question::before {
+  content: "+";
+  position: absolute;
+  left: -20px;
+  font-weight: bold;
+}
+
+.collapsible-tab.open .question::before {
+  content: "-";
+}
+
+.answer {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.answer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.answer li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.answer li:before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+/* src/components/FAQSection.css */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 140px 0 80px;
+  font-family: Arial, sans-serif;
+}
+
+.collapsible-tab__container{
+    position: relative;
+    background: #fff;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: 10px; 
+    margin-bottom: 30px;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.collapsible-tab__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 5%;
+    /* height: 100%;
+    width: 100%; */
+}
+    
+.collapsible-tab__question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 17px 30px 17px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.collapsible-tab__answer{
+    padding: 0 55px 17px 50px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1em;
+    color: #000;
+    opacity: 0.6;
+}
+
+.collapsible-tab__title{
+    font-size: 50px !important;
+    font-weight: 300;
+    line-height: 1.2em;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 80px;
+}
+
+.collapsible-tab__title-span{
+    color: #7963FF;
+}
