@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import ResponsiveImage from "./common/ResponsiveImage";
 import CircleImage from "../assets/img/circle-text.svg";
 import RightTopArrow from "../assets/img/big-right-top-arrow.svg";
 import ManWithPhone from "../assets/img/man-with-phone.png";
@@ -22,8 +21,8 @@ const Footer = () => {
           <img src={ManWithPhone} alt="Contact Man" />
         </div>
         <a href="#" className="link-btn d-inline-block rounded-circle text-center">
-            <img className="circle-rotate" src={CircleImage} alt="Circle image" />
-            <img src={RightTopArrow} alt="Contact Man" />
+          <img className="circle-rotate" src={CircleImage} alt="Circle image" />
+          <img src={RightTopArrow} alt="Contact Man" />
         </a>
 
         <div className="footer-area-inner section-spacing-top">

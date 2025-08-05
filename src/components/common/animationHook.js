@@ -36,7 +36,7 @@ export const useHeroAnimations = () => {
       // { el: '.icon-first', delay: 0.8, from: 'left' },
       { el: '.icon-second', delay: 1, from: 'left' },
       // { el: '.btn-wrapper.has_fade_anim', delay: 1.2, from: 'bottom' },
-      { el: '.scroll-down', delay: 1.5, from: 'bottom' },
+      // { el: '.scroll-down', delay: 1.5, from: 'bottom' },
       // { el: '.hero-social', delay: 1.2, from: 'right' }
     ];
 
