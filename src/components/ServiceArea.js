@@ -1,104 +1,123 @@
-import React, { useState } from "react";
-import AnimeImage from "../assets/img/img-s-68.webp"
-import CircleHalf from "../assets/img/circle.svg"
+// ServiceArea.jsx
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const ServiceArea = ({ 
-    sectionTitle, 
-    highlightWord, 
-    description, 
-    shapes = [], 
-    projects = [] 
-}) => {
+gsap.registerPlugin(ScrollTrigger);
 
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+// ✅ Service data (can be fetched from API too)
+const services = [
+  {
+    title: "Research & Strategy",
+    description: "We analyze your brand and audience to build a results-driven Shopify strategy tailored for growth.",
+    image: "images/service_1.jpg",
+    icon: "images/ser_icon_1.png",
+  },
+  {
+    title: "From Mockups to Modules",
+    description: "We turn design mockups into functional, scalable Shopify components with precision.",
+    image: "images/service-2.jpg",
+    icon: "images/ser_icon_2.png",
+  },
+  {
+    title: "Bug Testing & Speed Enhancement",
+    description: "We identify bugs and optimize speed to ensure smooth, high-performance Shopify experiences.",
+    image: "images/service-3.jpg",
+    icon: "images/ser_icon_3.png",
+  },
+];
 
-    return (
-        <section className="service-area">
-        <div className="container">
-            <div className="service-area-inner section-spacing">
-            
-            {/* Decorative Shapes */}
-            {shapes.map((shape, idx) => (
-                <div className={shape.className} key={idx}>
-                <img src={shape.src} alt={`shape-${idx}`} />
-                </div>
-            ))}
+const ServiceArea = () => {
+  const imageRefs = useRef([]);
 
-            {/* Section Title & Description */}
-            <div className="section-header">
-                <div className="section-title-wrapper">
-                <div className="shape-1 has_fade_anim">
-                    <img src={AnimeImage} alt="shape" />
-                </div>
-                <div className="title-wrapper has_text_move_anim">
-                    <div>
-                    <h2 className="section-title">
-                        {sectionTitle.split(highlightWord)[0]}
-                        <span>{highlightWord}</span>
-                        {sectionTitle.split(highlightWord)[1]}
-                    </h2>
-                    </div>
-                </div>
-                </div>
-                <div className="text-wrapper">
-                <p className="text has_fade_anim">{description}</p>
-                </div>
+  useEffect(() => {
+    imageRefs.current.forEach((img) => {
+        gsap.fromTo(
+            img,
+            { scale: 1.2 },
+            {
+              scale: 1,
+              ease: 'power1.out',
+              scrollTrigger: {
+                trigger: img,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 0.2,
+              },
+            }
+          );
+    });
+  }, []);
+
+  // Push refs without duplication
+  const addToImageRefs = (el) => {
+    if (el && !imageRefs.current.includes(el)) {
+      imageRefs.current.push(el);
+    }
+  };
+
+  return (
+    <section className="service-area section-spacing">
+      <div className="container">
+        <div className="row">
+          <div className="section-header d-flex justify-content-center">
+            <div className="section-title-wrapper text-center">
+              <div className="subtitle-wrapper overflow-hidden">
+                <span className="section-subtitle has-left-line has_fade_anim">Services</span>
+              </div>
+              <div className="title-wrapper">
+                <h2 className="section-title">
+                  <div>Our Popular Services</div>
+                </h2>
+              </div>
             </div>
-
-            {/* Project Circle List */}
-            <div className={`projects-circle-list text-center position-relative ${hoveredIndex !== null ? `hovered${hoveredIndex + 1}` : ''}`}>
-                <img
-                    src={CircleHalf}
-                    className="d-none d-lg-inline-block"
-                    alt="circle-border"
-                />
-                <div className="images text-start">
-                    {projects.map((proj, idx) => (
-                        <div className="image"
-                            key={idx}
-                            onMouseEnter={() => setHoveredIndex(idx)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                            <img src={require(`../assets/img/${proj.img}`)} alt={proj.title} />
-                            <div className="text">
-                                <h3>
-                                    <a href={proj.link}>{proj.title}</a>
-                                </h3>
-                                <p>{proj.description}</p>
-                                <a href={proj.link} className="link-btn d-flex align-items-center position-relative">
-                                    View Project
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <a href={proj.link} className="position-absolute z-1 start-0 end-0 top-0 bottom-0"></a>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Optional: Text Content below */}
-                <div className="contents text-start">
-                    {projects.map((proj, idx) => (
-                        <div className="item" key={idx}>
-                        <h3>
-                            <a href={proj.link}>{proj.title}</a>
-                        </h3>
-                        <p>{proj.description}</p>
-                        <a
-                            href={proj.link}
-                            className="link-btn d-flex align-items-center position-relative"
-                        >
-                            View Project
-                            <i className="fa-solid fa-arrow-right"></i>
-                        </a>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            </div>
+          </div>
         </div>
-        </section>
-    );
+
+        <div className="row">
+          {services.map((service, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className="service-item">
+                <div className="service-image">
+                  <a href="#0">
+                    <figure className="image-anime">
+                      <img
+                        ref={addToImageRefs}
+                        src={service.image}
+                        alt={service.title}
+                        style={{
+                          width: '100%',
+                          height: '130%',
+                          objectFit: 'cover',
+                          transform: 'translate3d(0px, 0%, 0px)',
+                        }}
+                      />
+                    </figure>
+                  </a>
+                </div>
+                <div className="service-body">
+                  <div className="service-title">
+                    <h3><a href="#0">{service.title}</a></h3>
+                  </div>
+                  <div className="service-content-box">
+                    <div className="icon-box">
+                      <img src={service.icon} alt="" />
+                    </div>
+                    <div className="service-box-content">
+                      <p>{service.description}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="service-readmore-btn">
+                  <a href="#0" className="readmore-btn">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ServiceArea;
