@@ -21,12 +21,12 @@ const CtaSection = ({ content, formFields, buttonText }) => {
                         <div className="section-header">
                           <div className="section-title-wrapper">
                             <div className="subtitle-wrapper overflow-hidden">
-                              <span className="section-subtitle has-left-line has_fade_anim">
+                              {/* <span className="section-subtitle has-left-line has_fade_anim">
                                 {content.subtitle}
-                              </span>
+                              </span> */}
                             </div>
                             <div className="title-wrapper">
-                              <h2 className="section-title has_text_move_anim">{content.title}</h2>
+                              <h2 className="contact-form__title section-title has_text_move_anim">{content.title}</h2>
                             </div>
                           </div>
                           <div className="text-wrapper" style={{ marginBottom: '15px' }}>
