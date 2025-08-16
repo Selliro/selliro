@@ -13,7 +13,7 @@ const CtaSection = ({ content, formFields, buttonText }) => {
 
             {/* <section className="get_in_touch" id="contact_me"> */}
               <div className="container">
-                <div className="row align-items-start">
+                <div className="row align-items-center">
                   {/* Contact Info */}
                   <div className="col-lg-5">
                     <div className="contact-info-box">
@@ -100,14 +100,13 @@ const CtaSection = ({ content, formFields, buttonText }) => {
                       </div>
                     ))}
 
-                    <div className="col-12 mt-60">
+                    <div className="col-12 mt-50">
                       <CommonButton type="submit" dataText={buttonText} text={buttonText} />
                     </div>
                   </form>
                 </div>
                 </div>
-
-                          {/* RIGHT: Form */}
+                {/* RIGHT: Form */}
                 
               </div>
             {/* </section> */}

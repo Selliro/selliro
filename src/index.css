@@ -33,6 +33,25 @@ code {
     --font_dmsans: "DM Sans", sans-serif;
     --font_kanit: "Kanit", sans-serif;
 }
+html, body {
+    margin: 0;
+    padding: 0;    
+    height: 100%;
+}
+
+#smooth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#smooth-content {
+    will-change: transform;
+}
+
 
 body {
     padding: 0;
@@ -804,6 +823,7 @@ text-wrapper p {
 /* work area section */
 .works-area {
     padding-top: 40px;
+    background-color: #dce4e0;
 }
 .works-area-inner {
     position: relative;
@@ -1293,14 +1313,16 @@ figure {
     border-radius: 50%;
 }
 
-
+.cta-area {
+    background: #dce4e0;
+}
 .cta-area-inner {
     position: relative;
     border-top: 1px solid var(--border);
     padding-top: 145px;
 }
 .cta-area .section-header {
-    text-align: center;
+    text-align: left;
 }
 .cta-area .section-header .title-wrapper {
     margin-top: 17px;
@@ -1356,7 +1378,7 @@ figure {
 
 
 .footer-area {
-    background-color: #f5f5f5;
+    background-color: #1d1d1d;
     position: relative;
     border-top: 1px solid var(--footer-border);
 }
@@ -1415,7 +1437,7 @@ figure {
     content: "";
     width: 1px;
     height: calc(100% + 400px);
-    background-color: var(--footer-border);
+    background-color: #dce4e0;
     top: -200px;
     inset-inline-end: 0;
 }
@@ -1425,7 +1447,7 @@ figure {
 }
 
 .footer-area .footer-widget-wrapper .title {
-    color: var(--black);
+    color: var(--white);
     font-size: 30px;
     line-height: .73;
 }
@@ -1451,6 +1473,10 @@ button.subscribe-btn {
     color: var(--black);
 }
 
+.footer-nav-list li a {
+    color: #fff !important;
+}
+
 .footer-area .newsletter-text {
     margin-top: 29px;
 }
@@ -1470,7 +1496,7 @@ button.subscribe-btn {
     gap: 10px;
     align-items: center;
     padding: 18px 25px;
-    border: 1px solid #202020;
+    border: 1px solid #fff;
 }
 .subscribe-form .input-field input:focus-visible {
     outline: none;
@@ -1553,7 +1579,7 @@ button, input, optgroup, select, textarea {
 }
 
 .footer-area .social-links li a {
-    color: var(--black);
+    color: var(--white) !important;
 }
 
 .fa-brands, .fab {
@@ -1566,7 +1592,7 @@ button, input, optgroup, select, textarea {
 }
 
 .copyright-area {
-    border-top: 1px solid var(--footer-border);
+    border-top: 1px solid #dce4e0;
 }
 
 .copyright-area-inner {
@@ -1583,7 +1609,7 @@ button, input, optgroup, select, textarea {
 .copyright-area .copyright-text .text {
     text-align: center;
     font-weight: 500;
-    color: var(--black);
+    color: var(--white);
 }
 
 .copyright-area .copyright-text .text a {
@@ -1702,9 +1728,9 @@ button, input, optgroup, select, textarea {
     -webkit-text-stroke: 1px #fff;
     margin-left: 50px !important;
 }
-.icon {
+/* .icon {
     margin-bottom: -15px;
-}
+} */
 
 @-webkit-keyframes slide-har {
     0% {
@@ -2054,8 +2080,7 @@ button, input, optgroup, select, textarea {
 .faq-accordion .accordion-header .accordion-button {
   font-size: 20px;  
   font-family: var(--font_gt_t_bold);
-  line-height: 1.2em;
-  text-transform: uppercase;  
+  line-height: 1.2em;  
   background: transparent;
   color: var(--text-primary);
   padding: 17px 20px 17px 20px;
@@ -2070,11 +2095,35 @@ button, input, optgroup, select, textarea {
 .faq-accordion .accordion-item .accordion-body p {
   margin: 0;
   color: var(--secondary);
+  font-size: 16px;
 }
 .accordion-button:focus {
   box-shadow: none;
 }
-
+.our-faqs-content .faq-accordion .accordion-item .accordion-button.collapsed::after {
+    content: '\2b';
+}
+.our-faqs-content .faq-accordion .accordion-item .accordion-button::after {
+    content: '\f068';
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    width: 24px;
+    height: 24px;
+    color: var(--dark-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    background-image: none;
+}
 .our-faqs-content .section-title.sec-title .sub-title::before {
   margin: 0 auto;
 }
@@ -2258,7 +2307,7 @@ button, input, optgroup, select, textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent;  
+  background: #fff;  
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -2284,6 +2333,7 @@ button, input, optgroup, select, textarea {
   padding: 20px;
   margin-bottom: 30px;
   overflow: hidden;
+  background: #dce4e0;
 }
 .contact-info-item::before {
   content: '';
@@ -2333,4 +2383,24 @@ button, input, optgroup, select, textarea {
 }
 .get_in_touch_title {
   justify-content: flex-start;
+}
+
+.scroll-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9991;
+    border-radius: 100px;
+    color: var(--black);
+    background: var(--black);
+    transition: all .3s;
+    display: none;
+    /* mix-blend-mode: exclusion; */
+    border: 0;
+}
+.scroll-top svg {
+    font-size: 18px;
+    color: var(--white);
 }
