@@ -70,13 +70,19 @@ const FeaturesSection = ({button}) => {
           </div>
           <div className="col-lg-6 col-xs-12">
             <div className="about-us-content">
-              <div className="section-title">
-                <div class="subtitle-wrapper overflow-hidden">
-                  <span class="section-subtitle has-left-line has_fade_anim">About Us</span>
+              <div className="section-header d-flex justify-content-center">
+                <div className="section-title-wrapper">
+                  <div className="subtitle-wrapper overflow-hidden">
+                    <span className="section-subtitle has-left-line">About</span>
+                  </div>
+                  <div className="title-wrapper ">
+                    <h2 className="section-title title-anim">
+                      <div>Why We’re Different</div>
+                    </h2>
+                    <p>Backed by extensive Shopify expertise, we build scalable, future-ready eCommerce solutions that align with your vision. We’re not just developers—we’re strategic collaborators committed to helping your brand stand out and grow in a competitive market.</p>
+                  </div>
                 </div>
-                <h2 className="text-anime-style-2">Why We’re Different</h2>
-                <p>Backed by extensive Shopify expertise, we build scalable, future-ready eCommerce solutions that align with your vision. We’re not just developers—we’re strategic collaborators committed to helping your brand stand out and grow in a competitive market.</p>
-              </div>
+              </div>              
               <div class="about-us-body">
                 <ul>
                   <li>

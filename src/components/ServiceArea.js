@@ -39,7 +39,7 @@ const ServiceArea = () => {
               scale: 1,
               ease: 'power1.out',
               scrollTrigger: {
-                trigger: img,
+                trigger: img.closest('.service-image'),
                 start: 'top bottom',
                 end: 'bottom top',
                 scrub: 0.2,

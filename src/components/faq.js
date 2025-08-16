@@ -32,11 +32,23 @@ const OurFaq = () => {
         <div className="our-faqs-content">
             <div className="container">
 
-                <div className="section-title sec-title text-center">
+                {/* <div className="section-title sec-title text-center">
                     <span className="sub-title">faq</span>
                     <h2 className="section-title tp_title_slideup"> Get the Info You Need </h2>
+                </div> */}
+                <div className="section-header d-flex justify-content-center">
+                    <div className="section-title-wrapper text-center">
+                    <div className="subtitle-wrapper overflow-hidden">
+                        <span className="section-subtitle has-left-line has_fade_anim">Faq</span>
+                    </div>
+                    <div className="title-wrapper">
+                        <h2 className="section-title">
+                        <div>Get the Info You Need</div>
+                        </h2>
+                    </div>
+                    </div>
                 </div>
-                <div className="row">
+                <div className="row mt-5">
                     <div className="faq-accordion accordion col-lg-7" id="faqaccordion">
                         {faqData.map((item, index) => (
                         <div className="accordion-item" key={index}>
