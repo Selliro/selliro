@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-
+import { Helmet } from 'react-helmet';
 import { CustomCursor } from './components/common/customCursor';
 import { useHeroAnimations, useFeaturesAnimations } from './components/common/animationHook';
 import Header from "./components/Header";
@@ -73,8 +73,12 @@ function App() {
     };
   return (
     <div className="App">
+      <Helmet>
+        <title>Selliro — Smart eCommerce Solutions</title>
+        <meta name="description" content="Selliro is a powerful ecommerce builder for modern businesses in India." />
+      </Helmet>
       <div id="smooth-wrapper">
-        <div id="smooth-content">
+        <div id="smooth-content"> 
           <CustomCursor />
           <Header logo="Selliro" menuItems={menuItems} button={headerButton} />
           <Selliro />
