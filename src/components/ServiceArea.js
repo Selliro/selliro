@@ -57,7 +57,7 @@ const ServiceArea = () => {
   };
 
   return (
-    <section className="service-area section-spacing">
+    <section className="service-area section-spacing" id='services'>
       <div className="container">
         <div className="row">
           <div className="section-header d-flex justify-content-center">

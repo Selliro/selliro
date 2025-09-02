@@ -9,7 +9,7 @@ const Header = ({ logo, menuItems = [], button }) => {
           {/* Logo */}
           <div className="header__logo">
             <a href="/">
-              <h2>{logo}</h2>
+              <img src={logo} alt="Logo" width={120} />
             </a>
           </div>
 

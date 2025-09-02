@@ -4,7 +4,7 @@ import CommonButton from "./common/Button";
 const CtaSection = ({ content, formFields, buttonText }) => {
 
   return (
-    <section className="cta-area">
+    <section className="cta-area" id="contactus">
       <div className="container">
         <div className="row cta-area-inner section-spacing-bottom">
 
@@ -44,7 +44,7 @@ const CtaSection = ({ content, formFields, buttonText }) => {
                           <div className="contact-info-content">
                             <p>Need help!</p>
                             <h3>
-                              <a href={`tel: 7411501872`}>7411501872</a>
+                              <a href={`tel: 7411501872`}>+91-7411501872</a>
                             </h3>
                           </div>
                         </div>
@@ -58,7 +58,7 @@ const CtaSection = ({ content, formFields, buttonText }) => {
                           <div className="contact-info-content">
                             <p>E-mail</p>
                             <h3>
-                              <a href={`mailto:pradeepkumar.neginhal@gmail.com`}>pradeepkumar.neginhal@gmail.com</a>
+                              <a href={`mailto:pradeep@selliro.co.in`}>pradeepkumar.neginhal@gmail.com</a>
                             </h3>
                           </div>
                         </div>

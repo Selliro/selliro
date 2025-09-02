@@ -40,7 +40,7 @@ const HeroBanner = () => {
                     <div className="crp-hero-funfact-top-content">
                       <h4>Modern Moves</h4>
                       <p>
-                        Crafting exceptional design, seamless development, and
+                        Crafting exceptional design, development, and
                         smart strategy
                       </p>
                     </div>

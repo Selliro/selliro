@@ -3,24 +3,24 @@
     "name": "Chill",
     "url": "https://chill.com/",
     "img": "chill-project-img.png",
-    "description": "Creating product concepts that bridge great ideas and user expectations."
+    "description": "At my previous company, I worked on Chill.com, focusing on front-end development with responsive UI, custom components, and product filtering features to enhance performance and user experience."
   },
   {
     "name": "Kimia Wellness",
     "url": "https://kimia-wellness.com/",
     "img": "kimia-project-img.png",
-    "description": "Creating product concepts that bridge great ideas and user expectations."
+    "description": "At my previous company, I contributed to Kimia Wellness, developing a Shopify-based front-end with responsive design, high-performance UI components to enhance UX and conversion."
   },
   {
     "name": "Swing Fans",
     "url": "https://swingfans.com/",
     "img": "swing-fan-project-img.png",
-    "description": "Creating product concepts that bridge great ideas and user expectations."
+    "description": "I developed the front-end for SwingFans, implementing smooth product swatches and animated UI effects to enhance user interaction and visual engagement."
   },
   {
     "name": "DOCS-dermgroup",
     "url": "https://shop.docsdermgroup.com/",
     "img": "DOCS-project-img.png",
-    "description": "Creating product concepts that bridge great ideas and user expectations."
+    "description": "Developed a localization-driven module on DOCS Dermatology’s Shopify site, enabling region-based product displays for tailored user experiences."
   }
 ]

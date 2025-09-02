@@ -19,7 +19,7 @@ const ProjectWork = ({ sectionTitle, sectionSubtitle, projects }) => {
         }
     };
     return (
-        <section className="works-area">
+        <section className="works-area" id="projectwork">
         <div className="container">
             <div className="works-area-inner section-spacing-bottom">
                 <div className="shape-2">
