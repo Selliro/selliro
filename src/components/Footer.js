@@ -3,6 +3,7 @@ import CircleImage from "../assets/img/circle-text.svg";
 import RightTopArrow from "../assets/img/big-right-top-arrow.svg";
 import ManWithPhone from "../assets/img/man-with-phone.png";
 import { FooterContext } from "./FooterContext";
+import Logo from '../assets/img/logo.svg';
 
 const Footer = () => {
   const {
@@ -28,7 +29,7 @@ const Footer = () => {
         <div className="footer-area-inner section-spacing-top">
           <div className="footer-widget-wrapper">
             <div className="footer-logo">
-              <h2>{logo}</h2>
+              <img src={Logo} alt="Logo" width={120} className="mb-4"/>
             </div>
             <div className="footer-widget-wrapper">
               <h2 className="title">Follow Us</h2>

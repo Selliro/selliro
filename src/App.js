@@ -20,6 +20,7 @@ import ContactForm from "./components/ContactForm";
 import contactFormData from "./contactFormData.json";
 import ScrollingTicker from './components/ScrollingTicker';
 import ScrollTop from "./components/common/scrollTop";
+import Logo from './assets/img/logo.svg';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -81,10 +82,11 @@ function App() {
   }, []);
 
   const menuItems = [
-    { label: "About", href: "#about" },
-    { label: "Our Work", href: "#work" },
     { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "#aboutus" },
+    { label: "Project Work", href: "#projectwork" },
+    { label: "Faq", href: "#faq" },
+    { label: "Contact", href: "#contactus" },
   ];
   
   const headerButton = {
@@ -116,8 +118,8 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <title>Selliro — Smart eCommerce Solutions</title>
-        <meta name="description" content="Selliro is a powerful ecommerce builder for modern businesses in India." />
+        <title>Sellirio — Shopify Experts | Creative Ecommerce Design & Scalable Development</title>
+        <meta name="description" content="Sellirio partners with brands to design conversion-focused Shopify stores, develop tailored applications, and implement innovative strategies for digital growth." />
       </Helmet>
       
       <CustomCursor />
@@ -127,7 +129,7 @@ function App() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="main">
-            <Header logo="Selliro" menuItems={menuItems} button={headerButton} />
+            <Header logo={Logo} menuItems={menuItems} button={headerButton} />
             <HeroBanner />
             <ServiceArea {...serviceData} />
             <ScrollingTicker />     
