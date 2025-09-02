@@ -3,7 +3,7 @@ import CircleImage from "../assets/img/circle-text.svg";
 import RightTopArrow from "../assets/img/big-right-top-arrow.svg";
 import ManWithPhone from "../assets/img/man-with-phone.png";
 import { FooterContext } from "./FooterContext";
-import Logo from '../assets/img/logo.svg';
+import Logo from '../assets/img/logo-white.svg';
 
 const Footer = () => {
   const {
