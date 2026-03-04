@@ -1,0 +1,6 @@
+# Robots.txt for Selliro - allow Google and other search engines
+User-agent: *
+Allow: /
+
+# Sitemap location (replace with your live domain if different)
+Sitemap: https://www.selliro.co.in/sitemap.xml
