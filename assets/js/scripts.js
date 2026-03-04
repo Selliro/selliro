@@ -56,7 +56,7 @@ $(function () {
         function toggleLocalStorageItem() {
             if (isLight()) {
                 localStorage.removeItem("light-mode");
-                $(".navbar .logo img , footer .logo img").attr("src", "assets/imgs/logo-light.svg");
+                $(".navbar .logo img , footer .logo img").attr("src", "assets/imgs/logo-dark.svg");
             } else {
                 localStorage.setItem("light-mode", "set");
                 $(".navbar .logo img , footer .logo img").attr("src", "assets/imgs/logo-dark.svg");
@@ -78,7 +78,7 @@ $(function () {
         if (isLight()) {
             $("body.light .navbar .logo img , body.light footer .logo img").attr("src", "assets/imgs/logo-dark.svg");
         } else {
-            $(".navbar .logo img , footer .logo img").attr("src", "assets/imgs/logo-light.svg");
+            $(".navbar .logo img , footer .logo img").attr("src", "assets/imgs/logo-dark.svg");
         }
 
     });
@@ -133,7 +133,7 @@ $(function () {
         } else {
 
             navbar.removeClass("nav-scroll");
-            logo.attr('src', 'assets/imgs/logo-light.png');
+            logo.attr('src', 'assets/imgs/logo-dark.png');
         }
     });
 
