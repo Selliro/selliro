@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.selliro\.co\.in$ [NC]
+RewriteRule ^(.*)$ https://selliro.co.in/$1 [L,R=301]
